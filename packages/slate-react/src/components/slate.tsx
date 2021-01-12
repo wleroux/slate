@@ -1,11 +1,11 @@
-import React, { useMemo, useState, useCallback, useEffect } from 'react'
-import { Node, Element, Descendant } from 'slate'
+import React, {useCallback, useEffect, useMemo, useState} from 'react'
+import {Descendant} from 'slate'
 
-import { ReactEditor } from '../plugin/react-editor'
-import { FocusedContext } from '../hooks/use-focused'
-import { EditorContext } from '../hooks/use-slate-static'
-import { SlateContext } from '../hooks/use-slate'
-import { EDITOR_TO_ON_CHANGE } from '../utils/weak-maps'
+import {ReactEditor} from '../plugin/react-editor'
+import {FocusedContext} from '../hooks/use-focused'
+import {EditorContext} from '../hooks/use-slate-static'
+import {SlateContext} from '../hooks/use-slate'
+import {EDITOR_TO_ON_CHANGE} from '../utils/weak-maps'
 
 /**
  * A wrapper around the provider to handle `onChange` events, because the editor

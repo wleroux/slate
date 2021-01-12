@@ -34,10 +34,10 @@ const ImagesExample = () => {
       <Toolbar>
         <InsertImageButton />
       </Toolbar>
-      <Editable
+      {IS_ANDROID ? <AndroidEditable
         renderElement={props => <Element {...props} />}
         placeholder="Enter some text..."
-      />
+      /> : <DefaultEditable />}
     </Slate>
   )
 }
